@@ -2,6 +2,7 @@
 
  class Ship
  {
+     private $id;
      private $name;
 
      private $weaponPower = 0;
@@ -12,8 +13,9 @@
 
      private $underRepair;
 
-     public function __construct()
+     public function __construct($name)
      {
+         $this->name = $name;
          $this->underRepair = mt_rand(1,100) < 30;
      }
      public function isFunctional(){
@@ -96,6 +98,23 @@
      {
          $this->name = $name;
      }
+
+     /**
+      * @return integer
+      */
+     public function getId()
+     {
+         return $this->id;
+     }
+
+     /**
+      * @param integer $id
+      */
+     public function setId($id)
+     {
+         $this->id = $id;
+     }
+
 
 
 
