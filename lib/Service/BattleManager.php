@@ -58,7 +58,8 @@ class BattleManager
 
     }
 
-    private function didJediDestroyShipUsingTheForce(Ship $ship)
+
+    private function didJediDestroyShipUsingTheForce(Ship $ship): bool
     {
         $jediHeroProbability = $ship->getJediFactor() / 100;
 
